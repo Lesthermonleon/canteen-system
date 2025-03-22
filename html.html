@@ -5,60 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen System Login</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    
-    <!-- Hamburger Menu -->
-    <div class="dropdown">
-        <button class="menu-btn" onmouseover="showTooltip()" onmouseout="hideTooltip()">☰</button>
-        <span class="tooltip" id="tooltip">Seller Role</span>
-        <div id="roleDropdown" class="dropdown-content">
-            <a href="#" onclick="selectRole('Admin')">Admin</a>
-            <a href="#" onclick="selectRole('Seller')">Seller</a>
-        </div>
-    </div>
-    
-
-    <h1 style="font-family: 'Copperplate', 'Georgia', serif;">Login</h1>
-    <h5>Fueling students with tasty and nutritious meals every day</h5>
-
-<!-- Login Container -->
-<div class="login-container">
-    <form>
-        <input type="hidden" id="roleInput" name="role" required>
-
-        <div class="input-container">
-            <i class="fa-solid fa-envelope icon" id="emailIcon"></i>
-            <input type="email" id="email" placeholder="Enter your email">
-        </div>
-        
-        <div class="input-container">
-            <i class="fa-solid fa-lock icon" id="lockIcon"></i>
-            <input type="password" id="password" placeholder="Enter your password">
-            <i class="fa-solid fa-eye" id="togglePassword"></i>
-        </div>
-        
-
-        <!-- Remember Me & Forgot Password -->
-        <div class="remember-forgot">
-            <label><input type="checkbox"> Remember me</label>
-            <a href="#">Forgot Password?</a>
-        </div>
-
-        <button type="submit">Log In</button>
-    </form>
-
-    <p class="signup-text"><a href="#">Sign up</a></p>
-    <p class="divider">-------- Sign in with --------</p>
-    
-    <div class="social-login">
-        <button class="gmail">
-            <i class="fa-brands fa-facebook-f"></i>
-        </button>
-        <button class="gmail">
-            <i class="fa-solid fa-envelope"></i>
-        </button>
-    </div>
-</div>
+</body>
+</html>
