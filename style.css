@@ -6,7 +6,7 @@ body {
     height: 100vh;
     background: url('foo-BG.jpg') no-repeat center center/cover;
     margin: 0;
-    padding: 11px;
+    padding: 10px;
     position: relative;
     justify-content: flex-start;
     padding-left: 30px;
