@@ -7,5 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<body>
+   <!-- Hamburger Menu -->
+   <div class="dropdown">
+    <button class="menu-btn" onmouseover="showTooltip()" onmouseout="hideTooltip()">☰</button>
+    <span class="tooltip" id="tooltip">Seller Role</span>
+    <div id="roleDropdown" class="dropdown-content">
+        <a href="#" onclick="selectRole('Admin')">Admin</a>
+        <a href="#" onclick="selectRole('Seller')">Seller</a>
+    </div>
+</div>
 </body>
 </html>
