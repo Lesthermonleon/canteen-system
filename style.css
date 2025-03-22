@@ -1,19 +1,259 @@
-@keyframes blink {
-    0% { color: red; }
-    25% { color: blue; }
-    50% { color: green; }
-    75% { color: orange; }
-    100% { color: red; }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url('foo-BG.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    justify-content: flex-start;
+    padding-left: 30px;
 }
 
-@keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(200px); }
-    100% { transform: translateX(0); }
+/* Title Styling */
+h1, h5 {
+    color: #D84315;
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
-.animated-text {
+h1 {
     font-size: 30px;
+    top: 100px;
+}
+
+h5 {
+    font-size: 15px;
+    top: 150px;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    margin-left: 340px;
+}
+
+/* Input Fields with Icons */
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #FF6F00;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #FF6F00;
+}
+
+.input-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Eye Icon for Password Visibility */
+#togglePassword {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Remember Me & Forgot Password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.remember-forgot input {
+    margin-right: 5px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #E53935, #FF8F00);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
     font-weight: bold;
-    animation: blink 1s infinite alternate, move 3s infinite linear;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #D84315, #FF6F00);
+}
+
+/* Don't Have an Account */
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Sign in with Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-login button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.gmail {
+    background-color: #DB4437;
+}
+
+/* 🔹 Hamburger Menu - Positioned at Top Left */
+.menu-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    background: #FF6F00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* 🔹 Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Dropdown Items */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #FFCC00;
+}
+
+/* Show Dropdown */
+.show {
+    display: block;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip when hovering */
+.menu-btn:hover + .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+        margin-left: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    h1, h5 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Hamburger Menu for Mobile */
+    .menu-btn {
+        top: 5px;
+        left: 5px;
+    }
+
+    .dropdown {
+        top: 45px;
+        left: 5px;
+    }
 }
